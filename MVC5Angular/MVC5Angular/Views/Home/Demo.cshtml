@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+<h2>Users</h2>
+<div>
+    <div class="grid-style" data-ng-grid="userGrid">
+    </div>
+    <div class="user-details" data-ng-show="selectedUser">
+        <div class="well well-large">
+            <h3>User Details</h3>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-2 control-label">First Name</label>
+
+                    <input type="text" id="firstName" name="firstName" data-ng-model="selectedUser.FirstName" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+
+                    <input type="text" id="lastName" name="lastName" data-ng-model="selectedUser.LastName" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="gender" class="col-sm-2 control-label">
+                        Gender
+                    </label>
+                    <input type="radio" id="male" name="gender" data-ng-checked="!selectedUser.Gender"/><span class="gender-text">Male</span>
+                    <input type="radio" id="female" name="gender" data-ng-checked="selectedUser.Gender"/><span class="gender-text">Female</span>
+                </div>
+                <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+                    <input type="tel" id="mobile" name="mobile" data-ng-model="selectedUser.Mobile" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <input type="email" id="email" name="email" data-ng-model="selectedUser.Email" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="col-sm-2 control-label">Country</label>
+                    <select id="country" name="country" data-ng-model="selectedUser.Country" data-ng-options="c.id as c.name for c in countryList" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label for="state" class="col-sm-2 control-label">State</label>
+                    <select id="state" name="state" data-ng-model="selectedUser.State" data-ng-change="clearCityAndZip();" data-ng-options="s.id as s.name for s in countryList[0].states" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="col-sm-2 control-label">City</label>
+                    <select id="city" name="city" data-ng-model="selectedUser.City" data-ng-options="c.id as c.name for c in selectedState.cities" class="form-control">
+                        <option value="" selected="selected">Select City</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zip" class="col-sm-2 control-label">Zip</label>
+                    <input type="text" id="zip" name="zip" data-ng-model="selectedUser.Zip" class="form-control"/>
+                </div>
+                <input type="button" id="btnSubmit" class="btn" data-ng-click="updateUser(selectedUser)" value="UPDATE"/>
+            </form>
+        </div>
+
+    </div>
+</div>
