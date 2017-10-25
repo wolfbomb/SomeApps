@@ -251,6 +251,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Docs\Jonathan Koh - IELTS\Day 3 - Writing Week 1\Writing Questions .txt" />
+    <Content Include="Docs\Jonathan Koh - IELTS\Essay Writing\Writing Questions .txt" />
+    <Content Include="Docs\Student Visa\Site.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\ui-grid.svg" />
@@ -344,6 +346,8 @@
     <Content Include="Docs\BC\BC Tech Pilot\ea_name.pdf" />
     <Content Include="Docs\BC\BC-PNP-Skills-Immigration-and-Express-Entry-BC-Program-Guide.pdf" />
     <Content Include="Docs\BC\BC-PNP-Tech-Pilot_Key-Technology-Occupations.pdf" />
+    <Content Include="Docs\Student Visa\International Graduates Streams.pdf" />
+    <Content Include="Docs\Jonathan Koh - IELTS\Essay Writing\Nimrod Essay.docx" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
